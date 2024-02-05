@@ -1,0 +1,51 @@
+import time
+import random
+ikincibilgisayarpuani= 0
+birincibilgisayarpuani= 0
+while True:
+    ikincibilgisayar=random.randint(1,3)
+    birincibilgisayar=random.randint(1,3)
+    
+    if birincibilgisayar ==1:
+            birincibilgisayar="taş"
+    elif birincibilgisayar==2:
+        birincibilgisayar="kağıt"
+    elif birincibilgisayar==3:
+        birincibilgisayar="makas"
+    if ikincibilgisayar ==1:
+        ikincibilgisayar="taş"
+    elif ikincibilgisayar==2:
+        ikincibilgisayar="kağıt"
+    elif ikincibilgisayar==3:
+        ikincibilgisayar="makas"
+    print("taş,kağıt,makas...")
+    time.sleep(1)
+    print(1)
+    time.sleep(1)
+    print(2)
+    time.sleep(1)
+    print(3)
+    time.sleep(1)
+    print("birinci bilgisayarın seçimi:",birincibilgisayar)
+    print("ikinci bilgisayarın seçimi:",ikincibilgisayar)
+    if birincibilgisayar == ikincibilgisayar:
+        print("beraberlik")
+    if birincibilgisayar == "taş" and ikincibilgisayar == "makas":
+        print("birincibilgisayar kazandı")
+        birincibilgisayarpuani = birincibilgisayarpuani + 1
+    elif birincibilgisayar == "taş" and ikincibilgisayar== "kağıt":
+        print("birincibilgisayar kaybetti")
+        ikincibilgisayarpuani = ikincibilgisayarpuani + 1
+    elif birincibilgisayar == "makas"    and ikincibilgisayar == "kağıt":
+        print("birincibilgisayar kazandı")
+        birincibilgisayarpuani= birincibilgisayarpuani + 1
+    elif birincibilgisayar == "makas" and ikincibilgisayar == "taş":
+        print("birincibilgisayar kaybetti")
+        ikincibilgisayarpuani = ikincibilgisayarpuani + 1
+    elif birincibilgisayar == "kağıt" and ikincibilgisayar == "taş":
+        print("birincibilgisayar kazandı")
+        birincibilgisayarpuani = birincibilgisayarpuani + 1
+    elif birincibilgisayar == "kağıt" and ikincibilgisayar == "makas":
+        print("birincibilgisayar kaybetti")
+        birincibilgisayarpuani = ikincibilgisayarpuani + 1
+    print("mevcut puan durumu: Birinci Bilgisayar Puanı:",birincibilgisayarpuani,"İkinci Bilgisayar Puanı:",ikincibilgisayarpuani)
